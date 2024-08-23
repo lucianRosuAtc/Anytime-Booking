@@ -51,14 +51,14 @@ export default function Form({
 
     return (
         <div className='text-center mx-4'>
-            <div className='flex flex-col lg:flex-row items-center justify-center lg:border rounded-full max-w-5xl mx-auto lg:space-x-4 my-6 lg:shadow-lg lg:px-10'>
+            <div className='flex flex-col lg:flex-row items-center justify-center lg:border rounded-full max-w-5xl mx-auto lg:space-x-4 my-6 lg:py-2 lg:shadow-lg lg:px-10'>
                 <div className="flex-col my-4 lg:flex-1 border lg:border-transparent shadow-lg lg:shadow-none rounded-full px-6 py-3 lg:px-0 lg:py-0">
 
                     {/* MARK: Select  
  */}
                     <Select onValueChange={(value) => setSelectedPrice(Number(value))}>
                         <SelectTrigger className="w-[246px] lg:w-full">
-                            <SelectValue placeholder={<div className="flex items-center space-x-2"><BedDouble /><span>Where are you going?</span></div>} />
+                            <SelectValue placeholder={<div className="flex items-center space-x-2"><BedDouble className="h-5 w-5 text-anytimePurple2"/><span>Where are you going?</span></div>} />
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup>
@@ -125,7 +125,7 @@ export default function Form({
                                         !date && "text-muted-foreground"
                                     )}
                                 >
-                                    <CalendarIcon className="mr-2 h-6 w-6" />
+                                    <CalendarIcon className="mr-2 h-6 w-6 text-anytimePurple2" />
                                     {date?.from ? (
                                         date.to ? (
                                             <>
@@ -162,11 +162,11 @@ export default function Form({
 
                 {/* MARK: search 
  */}
-                <Button className='rounded-full flex-1 lg:flex-[0.2] px-7 mt-4 lg:mt-0 shadow-xl'><Search className='mr-3' />Search</Button>
+                <Button className='rounded-full flex-1 lg:flex-[0.2] px-7 mt-4 lg:mt-0 shadow-xl bg-anytimeBlue hover:bg-anytimePurple2 hover:lg:mb-3 hover:shadow-lg transition-all'><Search className='mr-3' />Search</Button>
             </div>
 
             {totalPrice && (
-                <div className="text-gray-800 mt-4 lg:mt-10">Total Price: £ {totalPrice}</div>
+                <div className="text-anytimePurple2 mt-4 lg:mt-10 font-semibold  max-w-[300px] mx-auto">Total Price: <span className="text-anytimeBlue">£ {totalPrice}</span></div>
             )}
 
         </div>
