@@ -45,7 +45,7 @@ export default function Form({
     useEffect(() => {
         if (date?.from && date?.to && selectedPrice) {
             const days = (date.to.getTime() - date.from.getTime()) / (1000 * 3600 * 24);
-            setTotalPrice(days * selectedPrice);
+            setTotalPrice(Math.round(days * selectedPrice));
         }
     }, [date, selectedPrice]);
 
@@ -65,7 +65,7 @@ export default function Form({
                                 <SelectLabel>North America</SelectLabel>
                                 <SelectItem value="149">Beach Villa - £149/night</SelectItem>
                                 <SelectItem value="179">Mountain Cabin - £179/night</SelectItem>
-                                <SelectItem value="329">Mountain Standard - £329/night</SelectItem>
+                                <SelectItem value="329">Mountain Villa - £329/night</SelectItem>
                                 <SelectItem value="129">Texas Village - £129/night</SelectItem>
                             </SelectGroup>
                             <SelectGroup>
