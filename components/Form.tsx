@@ -57,7 +57,7 @@ export default function Form({
                     {/* MARK: Select  
  */}
                     <Select onValueChange={(value) => setSelectedPrice(Number(value))}>
-                        <SelectTrigger className="w-[260px] lg:w-full">
+                        <SelectTrigger className="w-[246px] lg:w-full">
                             <SelectValue placeholder={<div className="flex items-center space-x-2"><BedDouble /><span>Where are you going?</span></div>} />
                         </SelectTrigger>
                         <SelectContent>
@@ -121,11 +121,11 @@ export default function Form({
                                     id="date"
                                     variant={"outline"}
                                     className={cn(
-                                        "w-[260px] lg:w-full justify-start text-left font-normal",
+                                        "w-[246px] lg:w-full justify-start text-left font-normal",
                                         !date && "text-muted-foreground"
                                     )}
                                 >
-                                    <CalendarIcon className="mr-2 h-4 w-4" />
+                                    <CalendarIcon className="mr-2 h-6 w-6" />
                                     {date?.from ? (
                                         date.to ? (
                                             <>
